@@ -1,61 +1,132 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-h1{
-    color: rgb(162, 68, 13);
-    text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: 700;
-    font-size: 50px;
-    font-style: italic;
+
+.grid {
+  background: hsla(24, 49%, 51%, 1);
+
+  background: linear-gradient(
+    135deg,
+    hsla(24, 49%, 51%, 1) 20%,
+    hsla(26, 91%, 92%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    135deg,
+    hsla(24, 49%, 51%, 1) 20%,
+    hsla(26, 91%, 92%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    135deg,
+    hsla(24, 49%, 51%, 1) 20%,
+    hsla(26, 91%, 92%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#BF7645", endColorstr="#FDE7D6", GradientType=1 );
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas:
+    "header header header"
+    "navbar navbar navbar"
+    "main   main   section"
+    "footer footer footer";
 }
-header{
-    text-align: center;
+.header {
+  background-color: peru;
+  grid-column: 1/4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-p{
-    border-style: groove;
+p {
+    font-family: "Inknut Antiqua", serif;
     margin: 10px;
-    text-align: center;
+    text-align:left;
 }
-.navbar{
-    text-align: center;
-    width: 100%;
-    height: 45px;
-    background-color: rgba(102, 54, 10, 0.607);
-    position: sticky;
-    margin: 20px;
-    top: 0;
-    z-index: 20;
+.navbar {
+    font-family: "Inknut Antiqua", serif;
+  grid-area: navbar;
 }
-nav ul li a{
-    text-decoration: underline;
-    color: black;
-    font-size: 20px;
+.navbar ul {
+  background-color: rgb(80, 40, 40);
 }
-nav ul li{
-    display: inline-block;
-    padding: 20px;
+.navbar a {
+  color: white;
+  display: block;
+  padding: 5px;
+  text-decoration: underline;
 }
-img{
+.navbar > ul {
+  display: table;
+  width: 100%;
+}
+.navbar > ul > li {
+  display: table-cell;
+  border-right: 1px solid #d4d4d4;
+}
+.navbar > ul > li:last-child {
+  border-right: none;
+}
+.navbar > ul > li > a {
+  text-align: center;
+}
+.main {
+  grid-area: main;
+}
+.section {
+  grid-area: section;
+}
+.footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.mineralogo {
+  display: flex;
+  align-items: center;
+}
+main h1 {
+  color: rgb(162, 68, 13);
+  text-align: center;
+  font-family: "Inknut Antiqua", serif;
+  font-weight: 700;
+  font-size: 50px;
+  font-style: italic;
+}
+.mainimage{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 80%;
 }
-h2{
-    color: rgb(0, 0, 0);
+.imagefooter{
+    justify-content: center;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+  ;
+}
+footer{
+    font-family: "Inknut Antiqua", serif;
+    color: rgb(15, 15, 15);
     text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: 700;
-    font-size: 25px;
-    font-style: italic;
+}
+.imgprs1{
+    width: 100%;
+    position: relative;
 }
 
-footer{
-    color: white;
-    text-align: center;
-    background-color: rgba(77, 42, 9, 0.727)
-    ;
-    
+
+.imgprs2{
+    position: relative;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
